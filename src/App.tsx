@@ -19,6 +19,12 @@ import OnlineAdvertising from "./pages/digital-marketing/OnlineAdvertising";
 import GoogleAds from "./pages/digital-marketing/GoogleAds";
 import InfluencerMarketing from "./pages/digital-marketing/InfluencerMarketing";
 import OnlineReputation from "./pages/digital-marketing/OnlineReputation";
+import WebsiteRedesign from "./pages/web-development/WebsiteRedesign";
+import EcommerceWebsite from "./pages/web-development/EcommerceWebsite";
+import MobileFriendly from "./pages/web-development/MobileFriendly";
+import CustomWebsite from "./pages/web-development/CustomWebsite";
+import WebHosting from "./pages/web-development/WebHosting";
+import AppDevelopment from "./pages/web-development/AppDevelopment";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +36,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          
+          {/* Digital Marketing Routes */}
           <Route path="/digital-marketing" element={<DigitalMarketing />} />
           <Route path="/digital-marketing/social-media" element={<SocialMediaMarketing />} />
           <Route path="/digital-marketing/seo" element={<SearchEngineOptimization />} />
@@ -39,7 +47,16 @@ const App = () => (
           <Route path="/digital-marketing/google-ads" element={<GoogleAds />} />
           <Route path="/digital-marketing/influencer" element={<InfluencerMarketing />} />
           <Route path="/digital-marketing/reputation" element={<OnlineReputation />} />
+          
+          {/* Web Development Routes */}
           <Route path="/web-development" element={<WebDevelopment />} />
+          <Route path="/web-development/website-redesign" element={<WebsiteRedesign />} />
+          <Route path="/web-development/ecommerce" element={<EcommerceWebsite />} />
+          <Route path="/web-development/mobile-friendly" element={<MobileFriendly />} />
+          <Route path="/web-development/custom-design" element={<CustomWebsite />} />
+          <Route path="/web-development/hosting" element={<WebHosting />} />
+          <Route path="/web-development/app-development" element={<AppDevelopment />} />
+          
           <Route path="/branding" element={<Branding />} />
           <Route path="/it-solutions" element={<ItSolutions />} />
           <Route path="/company" element={<Company />} />

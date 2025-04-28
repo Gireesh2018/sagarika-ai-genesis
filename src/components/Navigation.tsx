@@ -67,7 +67,40 @@ const Navigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-          <NavLink to="/web-development">Web Development</NavLink>
+          
+          <div className="relative">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center font-medium text-sagarika-navy hover:text-sagarika transition-colors">
+                  Web Development <ChevronDown className="h-4 w-4 ml-1" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56">
+                <Link to="/web-development">
+                  <DropdownMenuItem>All Web Development</DropdownMenuItem>
+                </Link>
+                <Link to="/web-development/website-redesign">
+                  <DropdownMenuItem>Website Redesign</DropdownMenuItem>
+                </Link>
+                <Link to="/web-development/ecommerce">
+                  <DropdownMenuItem>E-commerce Website Design</DropdownMenuItem>
+                </Link>
+                <Link to="/web-development/mobile-friendly">
+                  <DropdownMenuItem>Mobile-Friendly Websites</DropdownMenuItem>
+                </Link>
+                <Link to="/web-development/custom-design">
+                  <DropdownMenuItem>Custom Website Design</DropdownMenuItem>
+                </Link>
+                <Link to="/web-development/hosting">
+                  <DropdownMenuItem>Web Hosting</DropdownMenuItem>
+                </Link>
+                <Link to="/web-development/app-development">
+                  <DropdownMenuItem>App Developments</DropdownMenuItem>
+                </Link>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+          
           <NavLink to="/branding">Branding</NavLink>
           <NavLink to="/it-solutions">IT Solutions</NavLink>
           <NavLink to="/company">Company</NavLink>
@@ -110,7 +143,19 @@ const Navigation = () => {
               ]} 
               onClick={toggleMenu}
             />
-            <MobileNavLink to="/web-development" onClick={toggleMenu}>Web Development</MobileNavLink>
+            <MobileDropdown 
+              title="Web Development" 
+              items={[
+                { label: "All Web Development", path: "/web-development" },
+                { label: "Website Redesign", path: "/web-development/website-redesign" },
+                { label: "E-commerce Website Design", path: "/web-development/ecommerce" },
+                { label: "Mobile-Friendly Websites", path: "/web-development/mobile-friendly" },
+                { label: "Custom Website Design", path: "/web-development/custom-design" },
+                { label: "Web Hosting", path: "/web-development/hosting" },
+                { label: "App Developments", path: "/web-development/app-development" },
+              ]} 
+              onClick={toggleMenu}
+            />
             <MobileNavLink to="/branding" onClick={toggleMenu}>Branding</MobileNavLink>
             <MobileNavLink to="/it-solutions" onClick={toggleMenu}>IT Solutions</MobileNavLink>
             <MobileNavLink to="/company" onClick={toggleMenu}>Company</MobileNavLink>

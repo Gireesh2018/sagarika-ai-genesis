@@ -25,6 +25,13 @@ import MobileFriendly from "./pages/web-development/MobileFriendly";
 import CustomWebsite from "./pages/web-development/CustomWebsite";
 import WebHosting from "./pages/web-development/WebHosting";
 import AppDevelopment from "./pages/web-development/AppDevelopment";
+import BrandingInfluencer from "./pages/branding/InfluencerMarketing";
+import CorporateVideo from "./pages/branding/CorporateVideo";
+import VideoProduction from "./pages/branding/VideoProduction";
+import AdFilm from "./pages/branding/AdFilm";
+import TheatreAdvertising from "./pages/branding/TheatreAdvertising";
+import VideoEditing from "./pages/branding/VideoEditing";
+import GraphicDesign from "./pages/branding/GraphicDesign";
 
 const queryClient = new QueryClient();
 
@@ -57,7 +64,16 @@ const App = () => (
           <Route path="/web-development/hosting" element={<WebHosting />} />
           <Route path="/web-development/app-development" element={<AppDevelopment />} />
           
+          {/* Branding Routes */}
           <Route path="/branding" element={<Branding />} />
+          <Route path="/branding/influencer-marketing" element={<BrandingInfluencer />} />
+          <Route path="/branding/corporate-video" element={<CorporateVideo />} />
+          <Route path="/branding/video-production" element={<VideoProduction />} />
+          <Route path="/branding/ad-film" element={<AdFilm />} />
+          <Route path="/branding/theatre-advertising" element={<TheatreAdvertising />} />
+          <Route path="/branding/video-editing" element={<VideoEditing />} />
+          <Route path="/branding/graphic-design" element={<GraphicDesign />} />
+          
           <Route path="/it-solutions" element={<ItSolutions />} />
           <Route path="/company" element={<Company />} />
           <Route path="*" element={<NotFound />} />

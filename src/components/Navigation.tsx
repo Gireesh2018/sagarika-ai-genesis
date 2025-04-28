@@ -101,7 +101,42 @@ const Navigation = () => {
             </DropdownMenu>
           </div>
           
-          <NavLink to="/branding">Branding</NavLink>
+          <div className="relative">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center font-medium text-sagarika-navy hover:text-sagarika transition-colors">
+                  Branding <ChevronDown className="h-4 w-4 ml-1" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56">
+                <Link to="/branding">
+                  <DropdownMenuItem>All Branding</DropdownMenuItem>
+                </Link>
+                <Link to="/branding/influencer-marketing">
+                  <DropdownMenuItem>Influencer Marketing</DropdownMenuItem>
+                </Link>
+                <Link to="/branding/corporate-video">
+                  <DropdownMenuItem>Corporate Video Production</DropdownMenuItem>
+                </Link>
+                <Link to="/branding/video-production">
+                  <DropdownMenuItem>Video Production</DropdownMenuItem>
+                </Link>
+                <Link to="/branding/ad-film">
+                  <DropdownMenuItem>Ad Film Making</DropdownMenuItem>
+                </Link>
+                <Link to="/branding/theatre-advertising">
+                  <DropdownMenuItem>Theatre Advertising</DropdownMenuItem>
+                </Link>
+                <Link to="/branding/video-editing">
+                  <DropdownMenuItem>Video Editing</DropdownMenuItem>
+                </Link>
+                <Link to="/branding/graphic-design">
+                  <DropdownMenuItem>Graphic Design</DropdownMenuItem>
+                </Link>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+          
           <NavLink to="/it-solutions">IT Solutions</NavLink>
           <NavLink to="/company">Company</NavLink>
         </div>
@@ -156,7 +191,20 @@ const Navigation = () => {
               ]} 
               onClick={toggleMenu}
             />
-            <MobileNavLink to="/branding" onClick={toggleMenu}>Branding</MobileNavLink>
+            <MobileDropdown 
+              title="Branding" 
+              items={[
+                { label: "All Branding", path: "/branding" },
+                { label: "Influencer Marketing", path: "/branding/influencer-marketing" },
+                { label: "Corporate Video Production", path: "/branding/corporate-video" },
+                { label: "Video Production", path: "/branding/video-production" },
+                { label: "Ad Film Making", path: "/branding/ad-film" },
+                { label: "Theatre Advertising", path: "/branding/theatre-advertising" },
+                { label: "Video Editing", path: "/branding/video-editing" },
+                { label: "Graphic Design", path: "/branding/graphic-design" },
+              ]} 
+              onClick={toggleMenu}
+            />
             <MobileNavLink to="/it-solutions" onClick={toggleMenu}>IT Solutions</MobileNavLink>
             <MobileNavLink to="/company" onClick={toggleMenu}>Company</MobileNavLink>
             <Button className="bg-sagarika hover:bg-sagarika-dark text-white w-full mt-2">

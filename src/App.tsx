@@ -33,6 +33,14 @@ import TheatreAdvertising from "./pages/branding/TheatreAdvertising";
 import VideoEditing from "./pages/branding/VideoEditing";
 import GraphicDesign from "./pages/branding/GraphicDesign";
 
+// Admin imports
+import AdminLayout from "./components/admin/AdminLayout";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import ThemeManager from "./pages/admin/ThemeManager";
+import PageEditor from "./pages/admin/PageEditor";
+import NavigationEditor from "./pages/admin/NavigationEditor";
+import SocialCalendar from "./pages/admin/SocialCalendar";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -42,6 +50,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+          {/* Public Website Routes */}
           <Route path="/" element={<Index />} />
           
           {/* Digital Marketing Routes */}
@@ -76,6 +85,16 @@ const App = () => (
           
           <Route path="/it-solutions" element={<ItSolutions />} />
           <Route path="/company" element={<Company />} />
+          
+          {/* Admin Routes */}
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route index element={<AdminDashboard />} />
+            <Route path="theme-manager" element={<ThemeManager />} />
+            <Route path="pages/new" element={<PageEditor />} />
+            <Route path="navigation" element={<NavigationEditor />} />
+            <Route path="social-calendar" element={<SocialCalendar />} />
+          </Route>
+          
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

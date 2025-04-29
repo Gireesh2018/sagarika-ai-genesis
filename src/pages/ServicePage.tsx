@@ -79,7 +79,7 @@ const ServicePage = ({
         </div>
       </section>
       
-      <section className="py-16 md:py-24 px-4 bg-sagarika-navy">
+      <section className="py-16 md:py-24 px-4 bg-sagarika">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your {title}?
@@ -88,7 +88,7 @@ const ServicePage = ({
             Contact us today to discuss how our {title} services can help your business grow and succeed.
           </p>
           <div className="flex justify-center gap-4">
-            <Button className="bg-sagarika hover:bg-sagarika-dark text-white px-8">
+            <Button className="bg-sagarika-green hover:bg-sagarika-green-dark text-sagarika-navy font-medium px-8">
               Contact Us
             </Button>
             <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8">

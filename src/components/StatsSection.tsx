@@ -3,9 +3,9 @@ import React from 'react';
 
 const StatsSection = () => {
   return (
-    <section className="py-16 bg-sagarika-navy relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-64 h-64 bg-sagarika opacity-10 rounded-full transform translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-sagarika-blue opacity-10 rounded-full transform -translate-x-1/3 translate-y-1/3"></div>
+    <section className="py-16 bg-sagarika relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-64 h-64 bg-sagarika-green opacity-20 rounded-full transform translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-sagarika-light opacity-20 rounded-full transform -translate-x-1/3 translate-y-1/3"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -40,7 +40,7 @@ const StatCard = ({ value, label }: { value: string; label: string }) => {
       <div className="text-4xl md:text-5xl font-bold text-white mb-2">
         {value}
       </div>
-      <div className="text-sagarika font-medium">
+      <div className="text-sagarika-green font-medium">
         {label}
       </div>
     </div>

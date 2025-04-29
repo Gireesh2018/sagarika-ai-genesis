@@ -64,9 +64,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				sagarika: {
-					DEFAULT: '#00d2a8',
-					dark: '#00a884',
-					light: '#33ddb8',
+					DEFAULT: '#670099',
+					dark: '#5a0086',
+					light: '#7f1aad',
+					green: '#2CF37F',
+					'green-dark': '#1edb6b',
+					'green-light': '#4ff595',
 					blue: '#1e5cd4',
 					navy: '#182c48',
 					gray: '#f7f9fc'

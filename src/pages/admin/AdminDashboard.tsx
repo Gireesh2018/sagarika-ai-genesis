@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { FileText, Palette, Calendar } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const AdminDashboard = () => {

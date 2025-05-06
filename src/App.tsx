@@ -41,6 +41,13 @@ import PageEditor from "./pages/admin/PageEditor";
 import NavigationEditor from "./pages/admin/NavigationEditor";
 import SocialCalendar from "./pages/admin/SocialCalendar";
 
+// AI Tools imports
+import AIContentGenerator from "./pages/admin/ai-tools/AIContentGenerator";
+import AIChatbotBuilder from "./pages/admin/ai-tools/AIChatbotBuilder";
+import AISEOOptimizer from "./pages/admin/ai-tools/AISEOOptimizer";
+import AIAnalytics from "./pages/admin/ai-tools/AIAnalytics";
+import AISocialMediaManager from "./pages/admin/ai-tools/AISocialMediaManager";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -93,6 +100,13 @@ const App = () => (
             <Route path="pages/new" element={<PageEditor />} />
             <Route path="navigation" element={<NavigationEditor />} />
             <Route path="social-calendar" element={<SocialCalendar />} />
+            
+            {/* AI Tools Routes */}
+            <Route path="ai-tools/content-generator" element={<AIContentGenerator />} />
+            <Route path="ai-tools/chatbot-builder" element={<AIChatbotBuilder />} />
+            <Route path="ai-tools/seo-optimizer" element={<AISEOOptimizer />} />
+            <Route path="ai-tools/analytics" element={<AIAnalytics />} />
+            <Route path="ai-tools/social-media" element={<AISocialMediaManager />} />
           </Route>
           
           <Route path="*" element={<NotFound />} />

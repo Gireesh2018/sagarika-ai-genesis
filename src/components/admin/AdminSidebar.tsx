@@ -12,7 +12,13 @@ import {
   Image,
   Columns3,
   ChevronDown,
-  ChevronRight
+  ChevronRight,
+  Zap,
+  Search,
+  MessageSquare,
+  TrendingUp,
+  BarChart,
+  Globe
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -103,6 +109,15 @@ const AdminSidebar = () => {
         <MenuItem icon={Calendar} label="Social Calendar" to="/admin/social-calendar" />
         
         <MenuItem icon={Palette} label="Theme Manager" to="/admin/theme-manager" />
+
+        {/* New AI Marketing Tools Section */}
+        <MenuGroup icon={Zap} label="AI Marketing Tools">
+          <MenuItem icon={TrendingUp} label="AI Content Generator" to="/admin/ai-tools/content-generator" />
+          <MenuItem icon={MessageSquare} label="AI Chatbot Builder" to="/admin/ai-tools/chatbot-builder" />
+          <MenuItem icon={Search} label="AI SEO Optimizer" to="/admin/ai-tools/seo-optimizer" />
+          <MenuItem icon={BarChart} label="AI Analytics" to="/admin/ai-tools/analytics" />
+          <MenuItem icon={Globe} label="AI Social Media Manager" to="/admin/ai-tools/social-media" />
+        </MenuGroup>
         
         <MenuItem icon={Settings} label="Settings" to="/admin/settings" />
       </nav>

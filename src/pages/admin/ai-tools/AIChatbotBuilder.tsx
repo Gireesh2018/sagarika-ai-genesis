@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { 
   Card, 
@@ -34,7 +35,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Telegram, MessageCircle, Bot, Whatsapp, Plus, MoreHorizontal } from 'lucide-react';
+import { MessageCircle, Bot, Plus, MoreHorizontal } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -155,7 +156,7 @@ const AIChatbotBuilder = () => {
       id: Math.random().toString(36).substring(2, 9),
       name: `${bot.name} (Copy)`,
       createdAt: new Date(),
-      status: 'draft',
+      status: 'draft' as const,
     };
     setChatbots([...chatbots, newBot]);
     toast({
@@ -165,7 +166,7 @@ const AIChatbotBuilder = () => {
   };
 
   const deleteBot = (id: string) => {
-    const botToDelete = chatbots.find(bot => bot.id === id);
+    const botToDelete = chatbots.find(bot => bot.id !== id);
     setChatbots(chatbots.filter(bot => bot.id !== id));
     toast({
       title: "Chatbot deleted",
@@ -378,12 +379,12 @@ const AIChatbotBuilder = () => {
                   )}
                   {bot.platforms.telegram && (
                     <div className="flex items-center gap-1 rounded-full bg-blue-100 px-2 py-1 text-xs text-blue-700">
-                      <Telegram className="h-3.5 w-3.5" /> Telegram
+                      <MessageCircle className="h-3.5 w-3.5" /> Telegram
                     </div>
                   )}
                   {bot.platforms.whatsapp && (
                     <div className="flex items-center gap-1 rounded-full bg-green-100 px-2 py-1 text-xs text-green-700">
-                      <Whatsapp className="h-3.5 w-3.5" /> WhatsApp
+                      <MessageCircle className="h-3.5 w-3.5" /> WhatsApp
                     </div>
                   )}
                 </div>

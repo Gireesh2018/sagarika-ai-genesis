@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { 
   Card, 
@@ -75,7 +74,7 @@ const AIChatbotBuilder = () => {
       id: '1',
       name: 'Customer Support Bot',
       description: 'Handles common customer inquiries and support tickets',
-      welcomeMessage: 'Hello! I'm your customer support assistant. How can I help you today?',
+      welcomeMessage: "Hello! I'm your customer support assistant. How can I help you today?",
       platforms: {
         website: true,
         telegram: false,
@@ -88,7 +87,7 @@ const AIChatbotBuilder = () => {
       id: '2',
       name: 'Lead Generation Bot',
       description: 'Qualifies leads and collects contact information',
-      welcomeMessage: 'Hi there! I can help answer your questions about our services and connect you with our team.',
+      welcomeMessage: "Hi there! I can help answer your questions about our services and connect you with our team.",
       platforms: {
         website: true,
         telegram: true,

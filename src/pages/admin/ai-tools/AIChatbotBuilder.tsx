@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { 
   Card, 
@@ -122,7 +121,11 @@ const AIChatbotBuilder = () => {
       name: values.name,
       description: values.description,
       welcomeMessage: values.welcomeMessage,
-      platforms: values.platforms,
+      platforms: {
+        website: values.platforms.website,
+        telegram: values.platforms.telegram,
+        whatsapp: values.platforms.whatsapp,
+      },
       createdAt: new Date(),
       status: 'draft',
     };
@@ -166,7 +169,7 @@ const AIChatbotBuilder = () => {
   };
 
   const deleteBot = (id: string) => {
-    const botToDelete = chatbots.find(bot => bot.id !== id);
+    const botToDelete = chatbots.find(bot => bot.id === id);
     setChatbots(chatbots.filter(bot => bot.id !== id));
     toast({
       title: "Chatbot deleted",

@@ -323,7 +323,10 @@ const AIContentGenerator = () => {
                               setPrompt(item.title);
                               setContentType(item.type);
                               setGeneratedContent(item.content);
-                              document.querySelector('[data-value="create"]')?.click();
+                              const createTab = document.querySelector('[data-value="create"]') as HTMLElement;
+                              if (createTab) {
+                                createTab.click();
+                              }
                             }}
                           >
                             <FileText className="h-4 w-4 mr-1" /> Edit

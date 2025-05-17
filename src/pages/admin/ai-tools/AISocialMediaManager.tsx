@@ -43,7 +43,7 @@ const AISocialMediaManager = () => {
         .join(', ');
         
       setGeneratedContent(
-        `Check out our latest digital marketing solutions! We've just launched new AI-powered tools to help businesses grow their online presence and reach their target audience more effectively. #DigitalMarketing #AI #BusinessGrowth #${platforms.replaceAll(', ', ' #')}`
+        `Check out our latest digital marketing solutions! We've just launched new AI-powered tools to help businesses grow their online presence and reach their target audience more effectively. #DigitalMarketing #AI #BusinessGrowth #${platforms.split(', ').join(' #')}`
       );
       setIsGenerating(false);
       toast({

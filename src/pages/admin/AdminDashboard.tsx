@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FileText, Palette, Calendar, Users, TrendingUp, Eye, MessageSquare, Zap } from 'lucide-react';
+import { FileText, Palette, Calendar, Users, TrendingUp, Eye, MessageSquare, Zap, Settings, Layout } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -65,6 +65,79 @@ const AdminDashboard = () => {
         </Card>
       </div>
       
+      {/* Management Tools */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>Page Management</CardTitle>
+          </CardHeader>
+          <CardContent className="grid grid-cols-2 gap-4">
+            <Button asChild variant="outline" className="h-20 flex flex-col">
+              <Link to="/admin/pages">
+                <FileText className="h-6 w-6 mb-2" />
+                <span>All Pages</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-20 flex flex-col">
+              <Link to="/admin/pages/new">
+                <FileText className="h-6 w-6 mb-2" />
+                <span>New Page</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-20 flex flex-col">
+              <Link to="/admin/theme-customizer">
+                <Palette className="h-6 w-6 mb-2" />
+                <span>Theme Colors</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-20 flex flex-col">
+              <Link to="/admin/theme-customizer">
+                <Layout className="h-6 w-6 mb-2" />
+                <span>Layout Settings</span>
+              </Link>
+            </Button>
+          </CardContent>
+        </Card>
+        
+        <Card>
+          <CardHeader>
+            <CardTitle>Quick Actions</CardTitle>
+          </CardHeader>
+          <CardContent className="grid grid-cols-2 gap-4">
+            <Button asChild variant="outline" className="h-20 flex flex-col">
+              <Link to="/admin/theme-manager">
+                <Settings className="h-6 w-6 mb-2" />
+                <span>Theme Manager</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-20 flex flex-col">
+              <Link to="/admin/social-calendar">
+                <Calendar className="h-6 w-6 mb-2" />
+                <span>Schedule Post</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-20 flex flex-col">
+              <Link to="/admin/ai-tools/content-generator">
+                <MessageSquare className="h-6 w-6 mb-2" />
+                <span>AI Content</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-20 flex flex-col">
+              <Link to="/admin/navigation">
+                <Settings className="h-6 w-6 mb-2" />
+                <span>Navigation</span>
+              </Link>
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+
       {/* Recent Activity */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <Card>

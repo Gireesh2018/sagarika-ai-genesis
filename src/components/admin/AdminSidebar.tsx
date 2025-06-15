@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -108,9 +107,12 @@ const AdminSidebar = () => {
         
         <MenuItem icon={Calendar} label="Social Calendar" to="/admin/social-calendar" />
         
-        <MenuItem icon={Palette} label="Theme Manager" to="/admin/theme-manager" />
+        <MenuGroup icon={Palette} label="Theme & Design">
+          <MenuItem icon={Palette} label="Theme Manager" to="/admin/theme-manager" />
+          <MenuItem icon={Palette} label="Theme Customizer" to="/admin/theme-customizer" />
+        </MenuGroup>
 
-        {/* New AI Marketing Tools Section */}
+        {/* AI Marketing Tools Section */}
         <MenuGroup icon={Zap} label="AI Marketing Tools">
           <MenuItem icon={TrendingUp} label="AI Content Generator" to="/admin/ai-tools/content-generator" />
           <MenuItem icon={MessageSquare} label="AI Chatbot Builder" to="/admin/ai-tools/chatbot-builder" />

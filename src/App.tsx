@@ -37,7 +37,9 @@ import GraphicDesign from "./pages/branding/GraphicDesign";
 import AdminLayout from "./components/admin/AdminLayout";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import ThemeManager from "./pages/admin/ThemeManager";
+import ThemeCustomizer from "./pages/admin/ThemeCustomizer";
 import PageEditor from "./pages/admin/PageEditor";
+import PagesList from "./pages/admin/PagesList";
 import NavigationEditor from "./pages/admin/NavigationEditor";
 import SocialCalendar from "./pages/admin/SocialCalendar";
 
@@ -97,6 +99,8 @@ const App = () => (
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<AdminDashboard />} />
             <Route path="theme-manager" element={<ThemeManager />} />
+            <Route path="theme-customizer" element={<ThemeCustomizer />} />
+            <Route path="pages" element={<PagesList />} />
             <Route path="pages/new" element={<PageEditor />} />
             <Route path="navigation" element={<NavigationEditor />} />
             <Route path="social-calendar" element={<SocialCalendar />} />
